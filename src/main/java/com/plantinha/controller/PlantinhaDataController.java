@@ -24,6 +24,15 @@ public class PlantinhaDataController {
         }
     }
 
+    @PostMapping(value = "/teste")
+    public ResponseEntity<String> teste() {
+        try {
+            return ResponseEntity.ok("Hello World");
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
+    }
+
     @GetMapping(value = "/listar")
     public ResponseEntity<List<PlantinhaData>> listAllEventos() {
         try {
