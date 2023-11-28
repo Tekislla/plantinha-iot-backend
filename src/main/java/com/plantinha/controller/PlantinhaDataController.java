@@ -15,28 +15,10 @@ public class PlantinhaDataController {
     @Autowired
     PlantinhaDataService service;
 
-    @PostMapping(value = "/umidade")
-    public ResponseEntity<PlantinhaData> criarEventoUmidade(@RequestBody PlantinhaDataDTO dto) {
+    @PostMapping(value = "/criar")
+    public ResponseEntity<PlantinhaData> criarEvento(@RequestBody PlantinhaDataDTO dto) {
         try {
-            return ResponseEntity.ok(service.criaEventoUmidade(dto));
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().build();
-        }
-    }
-
-    @PostMapping(value = "/temperatura")
-    public ResponseEntity<PlantinhaData> criarEventoTemperatura(@RequestBody PlantinhaDataDTO dto) {
-        try {
-            return ResponseEntity.ok(service.criaEventoTemperatura(dto));
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().build();
-        }
-    }
-
-    @PostMapping(value = "/luminosidade")
-    public ResponseEntity<PlantinhaData> criarEventoLuminosidade(@RequestBody PlantinhaDataDTO dto) {
-        try {
-            return ResponseEntity.ok(service.criaEventoLuminosidade(dto));
+            return ResponseEntity.ok(service.criaEvento(dto));
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }

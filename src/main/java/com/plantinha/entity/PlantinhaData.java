@@ -13,8 +13,8 @@ public class PlantinhaData {
     @Column(name = "evento")
     private String evento;
 
-    @Column(name = "data_evento")
-    private String dataEvento;
+    @Column(name = "data_hora_evento")
+    private String dataHoraEvento;
 
     @Column(name = "valorTemperatura")
     private float valorTemperatura;
@@ -41,12 +41,12 @@ public class PlantinhaData {
         this.evento = evento;
     }
 
-    public String getDataEvento() {
-        return dataEvento;
+    public String getDataHoraEvento() {
+        return dataHoraEvento;
     }
 
-    public void setDataEvento(String dataEvento) {
-        this.dataEvento = dataEvento;
+    public void setDataHoraEvento(String dataHoraEvento) {
+        this.dataHoraEvento = dataHoraEvento;
     }
 
     public float getValorTemperatura() {
