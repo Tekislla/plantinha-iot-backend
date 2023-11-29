@@ -5,18 +5,15 @@ server:
 
 spring:
   datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:file:./plantinha
-    username: root
-    password: root
+    url: jdbc:postgresql://ec2-44-212-250-48.compute-1.amazonaws.com:5432/d16s61ulqjj0uv
+    username: hjmkkziemucgbp
+    password: 83cefcd2c5e0100db11a88a977999e26c30d9e64f512108bf76fc5c54110918c
+    driver-class-name: org.postgresql.Driver
 
-  h2:
-    console:
-      enabled: true
-      path: /db
+  liquibase:
+    change-log: classpath:/db/dbchangeLog.xml
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
     show-sql: true
-    database-platform: org.hibernate.dialect.H2Dialect

@@ -1,0 +1,20 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="1" author="Lazarim">
+        <createTable tableName="plantinha_data">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="evento" type="varchar(80)"/>
+            <column name="data_hora_evento" type="varchar(80)"/>
+            <column name="valor_temperatura" type="float"/>
+            <column name="valor_umidade" type="float"/>
+            <column name="valor_luminosidade" type="float"/>
+        </createTable>
+
+    </changeSet>
+</databaseChangeLog>

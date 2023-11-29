@@ -2,7 +2,6 @@ package com.plantinha.service;
 
 import com.plantinha.dto.PlantinhaDataDTO;
 import com.plantinha.entity.PlantinhaData;
-import com.plantinha.enums.EventoEnum;
 import com.plantinha.repository.PlantinhaDataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

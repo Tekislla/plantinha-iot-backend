@@ -16,13 +16,13 @@ public class PlantinhaData {
     @Column(name = "data_hora_evento")
     private String dataHoraEvento;
 
-    @Column(name = "valorTemperatura")
+    @Column(name = "valor_temperatura")
     private float valorTemperatura;
 
-    @Column(name = "valorUmidade")
+    @Column(name = "valor_umidade")
     private float valorUmidade;
 
-    @Column(name = "valorLuminosidade")
+    @Column(name = "valor_luminosidade")
     private float valorLuminosidade;
 
     public Long getId() {
