@@ -16,7 +16,7 @@ import java.util.TimeZone;
 public class PlantinhaDataService {
     @Autowired
     PlantinhaDataRepository repo;
-    private static final String pattern = "dd/MM/yyyy hh:mm:ss";
+    private static final String pattern = "dd/MM/yyyy HH:mm:ss";
 
     public PlantinhaData criaEvento(PlantinhaDataDTO dto) {
         PlantinhaData e = new PlantinhaData();
