@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 @Service
 public class PlantinhaDataService {
@@ -19,8 +20,12 @@ public class PlantinhaDataService {
 
     public PlantinhaData criaEvento(PlantinhaDataDTO dto) {
         PlantinhaData e = new PlantinhaData();
-        Date dataHoraEvento = new Date();
+
+        TimeZone timeZone = TimeZone.getTimeZone("America/Sao_Paulo");
         SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+        sdf.setTimeZone(timeZone);
+
+        Date dataHoraEvento = new Date();
 
         e.setEvento(dto.getEvento());
         e.setDataHoraEvento(sdf.format(dataHoraEvento));
