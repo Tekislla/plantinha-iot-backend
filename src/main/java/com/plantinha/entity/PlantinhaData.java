@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Table(name = "plantinha_data")
 @Entity
-public class PlantinhaData {
+public class PlantinhaData implements Comparable<PlantinhaData> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -71,5 +71,10 @@ public class PlantinhaData {
 
     public void setValorLuminosidade(float valorLuminosidade) {
         this.valorLuminosidade = valorLuminosidade;
+    }
+
+    @Override
+    public int compareTo(PlantinhaData o) {
+        return Long.compare(this.id, o.id);
     }
 }

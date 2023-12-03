@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
@@ -38,11 +39,15 @@ public class PlantinhaDataService {
 
 
     public List<PlantinhaData> listAllEventos() {
-        return (List<PlantinhaData>) repo.findAll();
+        List<PlantinhaData> list = (List<PlantinhaData>) repo.findAll();
+        Collections.sort(list);
+        return list;
     }
 
     public List<PlantinhaData> listByEvento(String evento) {
-        return (List<PlantinhaData>) repo.findByEvento(evento);
+        List<PlantinhaData> list = repo.findByEvento(evento);
+        Collections.sort(list);
+        return list;
     }
 
 }
