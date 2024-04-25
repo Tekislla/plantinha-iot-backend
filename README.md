@@ -1,2 +1,2 @@
 # plantinha-iot-backend
-Backend da plantinha IoT
+Backendo do projeto IoT sobre o vaso de plantas inteligente.
